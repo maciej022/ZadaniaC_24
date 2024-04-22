@@ -10,11 +10,14 @@ namespace Powtorzeniowy
     {
         public void Wyswietl(int[] tab)
         {
-            for(int i=0;i < tab.Length; i++)
+            for (int i = 0; i < tab.Length; i++)
             {
-                Console.WriteLine(tab[i]+", ");
+                Console.WriteLine(tab[i] + ", ");
             }
+            Console.WriteLine();
         }
+
+
 
 
         public int[] Towrzenie_tablicy()
@@ -31,17 +34,48 @@ namespace Powtorzeniowy
         }
         public void SortowanieBabelkowe(int[] tablica)
         {
-            for (int i = 0; i < tablica.Length ; i++)
+            for (int i = 0; i < tablica.Length; i++)
             {
-                for (int j = 1; j < tablica.Length - i ; j++)
+                for (int j = 1; j < tablica.Length - i; j++)
                 {
-                    int temp = tablica[j-1];
-                    tablica[j-1] = tablica[j];
+                    int temp = tablica[j - 1];
+                    tablica[j - 1] = tablica[j];
                     tablica[j] = temp;
                 }
             }
 
         }
+        public void Przeszukaj(int[] tab)
+        {
+            Console.WriteLine("Jakiej liczy szukasz w tablicy? ");
+            int szukana = int.Parse(Console.ReadLine());
 
+            bool liczba_istnieje = false;
+            int ile_powtorzen = 0;
+            for (int i = 0; i < tab.Length; i++)
+            {
+                if (tab[i] == szukana)
+                {
+                    liczba_istnieje = true;
+                    ile_powtorzen++;
+                }
+
+            }
+            if (liczba_istnieje == true)
+            {
+                Console.Write($"Liczba jest w tablicy, wystepuje {ile_powtorzen} razy, ");
+            }
+            else
+            {
+                Console.WriteLine("Liczby nie ma w tablicy ");
+
+
+
+
+
+
+            }
+
+        }
     }
 }

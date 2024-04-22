@@ -14,8 +14,9 @@ class PlikGłówny
         tablice.SortowanieBabelkowe(tab);
 
         
-        
-           
+       
+
+        tablice.Przeszukaj(tab);
         
     }
         
