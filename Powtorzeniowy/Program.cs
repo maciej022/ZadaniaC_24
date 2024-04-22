@@ -11,6 +11,8 @@ class PlikGłówny
       int[] tab =  tablice.Towrzenie_tablicy();
         tablice.Wyswietl(tab);
 
+        tablice.SortowanieBabelkowe(tab);
+
         
         
            

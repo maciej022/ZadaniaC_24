@@ -29,6 +29,19 @@ namespace Powtorzeniowy
             }
             return ints;
         }
+        public void SortowanieBabelkowe(int[] tablica)
+        {
+            for (int i = 0; i < tablica.Length ; i++)
+            {
+                for (int j = 1; j < tablica.Length - i ; j++)
+                {
+                    int temp = tablica[j-1];
+                    tablica[j-1] = tablica[j];
+                    tablica[j] = temp;
+                }
+            }
+
+        }
 
     }
 }
