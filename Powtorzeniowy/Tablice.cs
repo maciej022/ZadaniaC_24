@@ -8,9 +8,12 @@ namespace Powtorzeniowy
 {
     public class Tablice
     {
-        public void Wyswietl()
+        public void Wyswietl(int[] tab)
         {
-            Console.WriteLine("To jest plik z tablicami");
+            for(int i=0;i < tab.Length; i++)
+            {
+                Console.WriteLine(tab[i]+", ");
+            }
         }
 
 
